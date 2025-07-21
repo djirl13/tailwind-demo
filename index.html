@@ -5,63 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peakon Employee Voice - Engagement Overview</title>
     <link href="dist/output.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              dark: {
-                50: '#f8fafc',
-                100: '#f1f5f9',
-                200: '#e2e8f0',
-                300: '#cbd5e1',
-                400: '#94a3b8',
-                500: '#64748b',
-                600: '#475569',
-                700: '#334155',
-                800: '#1e293b',
-                900: '#0f172a',
-                950: '#020617',
-              }
-            },
-            fontFamily: {
-              sans: ['Inter', 'system-ui', 'sans-serif'],
-            },
-          },
-        },
-      }
-    </script>
     <style>
-      .btn-primary {
-        @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
-      }
-      
-      .btn-secondary {
-        @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200;
-      }
-      
-      .card {
-        @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700;
-      }
-
+      /* Custom styles for DaisyUI integration */
       .sidebar-item {
-        @apply flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200;
+        @apply flex items-center px-4 py-2 rounded-lg transition-colors duration-200;
       }
 
       .sidebar-item.active {
-        @apply bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400;
-      }
-
-      .metric-card {
-        @apply bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700;
+        @apply bg-primary/10 text-primary;
       }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
+<body class="min-h-screen">
     <!-- Header -->
-    <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+    <header class="navbar bg-base-100 border-b border-base-300 sticky top-0 z-50">
         <div class="flex items-center justify-between px-6 py-4">
             <!-- Logo and Brand -->
             <div class="flex items-center space-x-4">
