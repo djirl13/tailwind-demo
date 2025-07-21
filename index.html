@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,18 +81,47 @@
 
             <!-- Right Icons -->
             <div class="flex items-center space-x-4">
-                <button class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                <button class="btn btn-ghost btn-circle">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5z"/>
                     </svg>
                 </button>
-                <button class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg">
+                <button class="btn btn-ghost btn-circle">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </button>
-                <div class="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center">
-                    <span class="text-sm font-medium">DJ</span>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="#" target="_blank">Theme Settings</a></li>
+                        <li><a href="#" target="_blank">Account</a></li>
+                        <li><a href="#" target="_blank">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a data-set-theme="light">Light</a></li>
+                        <li><a data-set-theme="dark">Dark</a></li>
+                        <li><a data-set-theme="corporate">Corporate</a></li>
+                        <li><a data-set-theme="business">Business</a></li>
+                        <li><a data-set-theme="synthwave">Synthwave</a></li>
+                        <li><a data-set-theme="cyberpunk">Cyberpunk</a></li>
+                    </ul>
+                </div>
+                <div class="avatar placeholder">
+                    <div class="bg-neutral text-neutral-content rounded-full w-8">
+                        <span class="text-xs">DJ</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,17 +203,18 @@
                         <p class="text-gray-500 dark:text-gray-400">Open round • 9 hours ago</p>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <button class="btn-secondary">NPS</button>
-                        <button class="btn-primary">Average</button>
-                        <button class="btn-secondary">Sharing options</button>
-                        <button class="btn-secondary">Export as PowerPoint</button>
+                        <button class="btn btn-outline">NPS</button>
+                        <button class="btn btn-primary">Average</button>
+                        <button class="btn btn-outline">Sharing options</button>
+                        <button class="btn btn-outline">Export as PowerPoint</button>
                     </div>
                 </div>
 
                 <!-- Metrics Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <!-- Engagement Score -->
-                    <div class="metric-card">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
                         <h3 class="text-lg font-semibold mb-4">Engagement score</h3>
                         <div class="text-4xl font-bold text-green-600 mb-2">7.9</div>
                         <div class="text-sm text-gray-600 dark:text-gray-400 mb-4">
@@ -226,65 +256,65 @@
                     </div>
 
                     <!-- Score Over Time -->
-                    <div class="metric-card">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-lg font-semibold">Score over time</h3>
-                            <div class="flex items-center space-x-2 text-green-600">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
-                                </svg>
-                                <span class="text-sm">+0.1 improvement since 29 Apr</span>
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold">Score over time</h3>
+                                <div class="flex items-center space-x-2 text-success">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+                                    </svg>
+                                    <span class="text-sm">+0.1 improvement since 29 Apr</span>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <!-- Mock Chart -->
-                        <div class="h-32 bg-gray-100 dark:bg-gray-700 rounded-lg mb-4 flex items-end justify-between px-4 py-2">
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 60%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 75%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 65%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 80%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 70%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 85%"></div>
-                            <div class="w-3 bg-blue-500 rounded-t" style="height: 79%"></div>
-                        </div>
-                        
-                        <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400">
-                            <span>2 Feb</span>
-                            <span>21 Jul</span>
+                            
+                            <!-- Mock Chart -->
+                            <div class="h-32 bg-base-200 rounded-lg mb-4 flex items-end justify-between px-4 py-2">
+                                <div class="w-3 bg-primary rounded-t" style="height: 60%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 75%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 65%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 80%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 70%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 85%"></div>
+                                <div class="w-3 bg-primary rounded-t" style="height: 79%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between text-xs text-base-content/60">
+                                <span>2 Feb</span>
+                                <span>21 Jul</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Participation -->
-                    <div class="metric-card">
-                        <h3 class="text-lg font-semibold mb-4">Participation</h3>
-                        
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-sm text-gray-600 dark:text-gray-400">Latest round</span>
-                                    <span class="font-semibold">33%</span>
-                                </div>
-                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 33%"></div>
-                                </div>
-                            </div>
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold mb-4">Participation</h3>
                             
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-sm text-gray-600 dark:text-gray-400">Aggregated</span>
-                                    <span class="font-semibold">98%</span>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-base-content/60">Latest round</span>
+                                        <span class="font-semibold">33%</span>
+                                    </div>
+                                    <progress class="progress progress-primary w-full" value="33" max="100"></progress>
                                 </div>
-                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="bg-green-500 h-2 rounded-full" style="width: 98%"></div>
+                                
+                                <div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-base-content/60">Aggregated</span>
+                                        <span class="font-semibold">98%</span>
+                                    </div>
+                                    <progress class="progress progress-success w-full" value="98" max="100"></progress>
                                 </div>
-                            </div>
-                            
-                            <div>
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-sm text-gray-600 dark:text-gray-400">Score accuracy</span>
-                                    <span class="font-semibold text-green-600">High</span>
+                                
+                                <div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-base-content/60">Score accuracy</span>
+                                        <span class="font-semibold text-success">High</span>
+                                    </div>
+                                    <p class="text-xs text-base-content/60">41 of 42 employees</p>
                                 </div>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">41 of 42 employees</p>
                             </div>
                         </div>
                     </div>
@@ -293,52 +323,56 @@
                 <!-- Additional Sections -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
                     <!-- Recent Comments -->
-                    <div class="metric-card">
-                        <h3 class="text-lg font-semibold mb-4">Recent Comments</h3>
-                        <div class="space-y-3">
-                            <div class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                <p class="text-sm">"Great team collaboration and supportive environment."</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">- Anonymous • 2 hours ago</p>
-                            </div>
-                            <div class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                <p class="text-sm">"Would appreciate more flexible working hours."</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">- Anonymous • 4 hours ago</p>
-                            </div>
-                            <div class="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                                <p class="text-sm">"Management is very responsive to feedback."</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">- Anonymous • 6 hours ago</p>
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold mb-4">Recent Comments</h3>
+                            <div class="space-y-3">
+                                <div class="alert alert-info">
+                                    <div>
+                                        <p class="text-sm">"Great team collaboration and supportive environment."</p>
+                                        <p class="text-xs opacity-60 mt-1">- Anonymous • 2 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="alert alert-warning">
+                                    <div>
+                                        <p class="text-sm">"Would appreciate more flexible working hours."</p>
+                                        <p class="text-xs opacity-60 mt-1">- Anonymous • 4 hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="alert alert-success">
+                                    <div>
+                                        <p class="text-sm">"Management is very responsive to feedback."</p>
+                                        <p class="text-xs opacity-60 mt-1">- Anonymous • 6 hours ago</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Quick Actions -->
-                    <div class="metric-card">
-                        <h3 class="text-lg font-semibold mb-4">Quick Actions</h3>
-                        <div class="space-y-3">
-                            <a href="#" target="_blank" class="block p-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
-                                <div class="flex items-center justify-between">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold mb-4">Quick Actions</h3>
+                            <div class="space-y-3">
+                                <a href="#" target="_blank" class="btn btn-outline btn-primary w-full justify-between">
                                     <span>View detailed report</span>
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                     </svg>
-                                </div>
-                            </a>
-                            <a href="#" target="_blank" class="block p-3 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors">
-                                <div class="flex items-center justify-between">
+                                </a>
+                                <a href="#" target="_blank" class="btn btn-outline btn-success w-full justify-between">
                                     <span>Schedule team meeting</span>
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                     </svg>
-                                </div>
-                            </a>
-                            <a href="#" target="_blank" class="block p-3 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors">
-                                <div class="flex items-center justify-between">
+                                </a>
+                                <a href="#" target="_blank" class="btn btn-outline btn-secondary w-full justify-between">
                                     <span>Export data</span>
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                     </svg>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
