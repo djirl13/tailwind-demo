@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-demo",
+  "version": "1.0.0",
+  "description": "A standard Tailwind CSS website with dark theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": ["tailwind", "css", "website", "dark-theme"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+} 
